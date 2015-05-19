@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html ng-app="pcmApp">
+	<head>
+		<title>PCM App</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="stylesheet" href="bower_components/lumx/dist/lumx.css">
+		<link rel="stylesheet" href="bower_components/mdi/css/materialdesignicons.css">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+
+	</head>
+	<body ng-controller="mainController">
+		<div class="card">
+		    <div class="toolbar">
+		        <div class="toolbar__left mr+++">
+		            <button class="btn btn--l btn--black btn--icon" lx-ripple>
+		                <i class="mdi mdi-menu"></i>
+		            </button>
+		        </div>
+
+		        <span class="toolbar__label fs-title">PCM Sign In</span>
+
+		        <div class="toolbar__right">
+		            <lx-search-filter closed theme="light"></lx-search-filter>
+
+		            <lx-dropdown position="right" from-top>
+		                <button class="btn btn--l btn--black btn--icon" lx-ripple lx-dropdown-toggle>
+		                    <i class="mdi mdi-dots-vertical"></i>
+		                </button>
+
+		                <lx-dropdown-menu>
+		                    <ul>
+		                        <li><a class="dropdown-link">Contact PCM Office</a></li>
+		                        <li><a class="dropdown-link">Change PCM</a></li>
+		                        <li><a class="dropdown-link">Report PCM</a></li>
+		                        <li class="dropdown-divider"></li>
+		                        <li><a class="dropdown-link dropdown-link--is-header">Sign Out</a></li>
+		                        <li><a class="dropdown-link">Goodbye</a></li>
+		                    </ul>
+		                </lx-dropdown-menu>
+		            </lx-dropdown>
+		        </div>
+		    </div>
+		</div>
+
+		<div flex-container="row" flex-gutter="24 ">
+		<div flex-item="3">&nbsp;</div>
+		<div class="data-table-container mt++ p+ card" flex-item="6">
+		    <table class="data-table">
+		        <thead>
+		            <tr>
+		                <th><strong>Date</strong></th>
+		                <th><strong>Attendance</strong></th>
+		                <th><strong>Summary &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong></th>
+		                
+		            </tr>
+		            <tr>
+		                
+		                <td colspan="12" class="divider divider--dark"></td>
+		            </tr>
+		        </thead>
+
+		        <tbody>
+		            <tr class="data-table__clickable-row">
+		       
+		                <td>
+		                    <span>05/07/15</span>
+		                </td>
+		                <td>
+		                <div class="radio-group">
+			               <div class="radio-button">
+						        <input type="radio" id="radio1" name="radio1" value="1" class="radio-button__input">
+						        <label  for="radio1" class="radio-button__label">Absent</label>
+						    </div>
+
+						    <div class="radio-button">
+						        <input type="radio" id="radio3" name="radio1" value="2" class="radio-button__input">
+						        <label for="radio3" class="radio-button__label">Present</label>
+						    </div>
+		                </td>
+		                <td>
+		                    
+		                    <lx-text-field label="Summary">
+           						<input type="text" ng-model="textFields.Summary">
+        					</lx-text-field>
+		                </td>
+		                </div>
+		            </tr>
+
+		            <tr class="data-table__clickable-row">
+		       
+		                <td>
+		                    <span>05/14/15</span>
+		                </td>
+		                <td>
+		                <div class="radio-group">
+			              <div class="radio-button">
+						        <input type="radio" id="radio5" name="radio3" value="1" class="radio-button__input">
+						        <label  for="radio5" class="radio-button__label">Absent</label>
+						    </div>
+
+						    <div class="radio-button">
+						        <input type="radio" id="radio4" name="radio3" value="2" class="radio-button__input">
+						        <label for="radio4" class="radio-button__label">Present</label>
+						    </div>
+						    </div>
+		                </td>
+		                <td>
+		                    
+		                    <lx-text-field label="Summary">
+           						<input type="text" ng-model="textFields.Summary2">
+        					</lx-text-field>
+		                </td>
+		            </tr>
+		        </tbody>
+		    </table>
+		    <div style="width: 100%;">
+		    <button class="btn btn--lg btn--blue btn--flat m++" style="float: right; margin-bottom: 10px !important; margin-top: 10px !important;" lx-ripple>Save</button>
+		    </div>
+		    </div>
+		</div>
+
+
+
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/velocity/velocity.js"></script>
+		<script src="bower_components/moment/min/moment-with-locales.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/lumx/dist/lumx.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
